@@ -1026,7 +1026,7 @@ public class InAppBrowser extends CordovaPlugin {
                         if (fullscreen)
                         {
                             enableFullScreen(activity, window);
-                            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+                            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
                         }
                         else
                         {
