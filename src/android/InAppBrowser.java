@@ -1006,41 +1006,9 @@ public class InAppBrowser extends CordovaPlugin {
                         cordova.startActivityForResult(InAppBrowser.this, Intent.createChooser(content, "Select File"), FILECHOOSER_REQUESTCODE);
                         return true;
                     }
-<<<<<<< HEAD
-
-                };
-
-                inAppChromeClient.setOnToggledFullscreen(new VideoEnabledWebChromeClient.ToggledFullscreenCallback() {
-                    @Override
-                    public void toggledFullscreen(boolean fullscreen)
-                    {
-                        // Your code to handle the full-screen change, for example showing and hiding the title bar. Example:
-                        
-                        Activity activity = cordova.getActivity();
-                        Window window = dialog.getWindow();
-                        if (fullscreen)
-                        {
-                            enableFullScreen(activity, window);
-                            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-                        }
-                        else
-                        {
-                            if (!fullScreenFeature)
-                            {
-                                disableFullScreen(activity, window);
-                            }
-                            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-                        }
-                    }
-                });
-                inAppWebView.setWebChromeClient(inAppChromeClient);
-                WebViewClient client = new InAppBrowserClient(thatWebView, edittext, beforeload);
-                inAppWebView.setWebViewClient(client);
-=======
                 });
                 currentClient = new InAppBrowserClient(thatWebView, edittext, beforeload);
                 inAppWebView.setWebViewClient(currentClient);
->>>>>>> eac7303ff52c857470273db2aff321830f1d76d5
                 WebSettings settings = inAppWebView.getSettings();
                 settings.setJavaScriptEnabled(true);
                 settings.setJavaScriptCanOpenWindowsAutomatically(true);
